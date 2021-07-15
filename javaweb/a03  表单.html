@@ -1,0 +1,80 @@
+<html>
+     <head>
+           <title>表单</title>
+      </head>
+      <body>
+             <hl align="center"><font color="chocolate">国庆活动问卷调查</font></hl>
+                    <form id="forml" name="forml" method="post" action="">
+                     <p>用户名：
+                      <input type="text" value="请输入您的用户名" name="uname" id="uname" maxlength="20" size="25" / >
+                     </p>
+                      <p>密&nbsp;&nbsp;&nbsp;&nbsp;码:
+                      <input type="password"  name="upass" id="upass" maxlength="40" size="25" / >
+					  <!-- 在4.01以后，font标签不再推荐使用 -->
+                      <font size="4" color="brown">密码是6-16位数字，大小字母组成</font></p>
+                      <p>
+                              性&nbsp;&nbsp;&nbsp;&nbsp; 别：
+                              <input type="radio" name="xb" id="xb"  value=" 男" checked="checked"/>男
+							  <input type="radio" name="xb"  value=" 女"  />女 
+					</p>      
+                        <p>年龄阶段：                                                                                                                                                 
+						<select name="nljd" id="nljd">
+                                 <option value="00">00后</option>                        
+								 <option value="90">90后</option>          
+								 <option value="80">80后</option>
+								 <option value="50">50后</option>
+						</select>
+                            </p>                       
+							<p>兴趣爱好：                                               
+							<input type="checkbox" name="ah1" id="ah1" />旅游  
+							<input type="checkbox" name="ah2" id="ah2" />美食
+							 <input type="checkbox" name="ah3" id="ah3" />看书    
+                             <input type="checkbox" name="ah4" id="ah4" />运动         
+							 <input type="checkbox" name="ah5" id="ah5" />动漫                                  
+                             <input type="checkbox" name="ah6" id="ah6" />听歌    
+                             <input type="checkbox" name="ah7" id="ah7" />画画    
+                             <input type="checkbox" name="ah8" id="ah8" />乐器    
+                              </p>
+							  <p>  
+                                       出行方式：    
+                                        <input type="checkbox" name="cx1" id="cx1" />火车 
+                                        <input type="checkbox" name="cx2" id="cx2" />飞机 
+                                        <input type="checkbox" name="cx3" id="cx3" />自驾 
+                                        <input type="checkbox" name="cx4" id="cx4" />公交 
+                                        <input type="checkbox" name="cx5" id="cx5" />自行车 
+                              </p>     
+                               <p> 
+                                        目的&nbsp;的&nbsp;地:
+                                        <input type="checkbox" name="md1" id="md1" />观光型
+                                        <input type="checkbox" name="md2" id="md2" />度假型
+                                        <input type="checkbox" name="md3" id="md3" />购物型
+                                        <input type="checkbox" name="md4" id="md4" />游乐型
+                                        <input type="checkbox" name="md5" id="md5" />商务型
+                              </p>     
+                              您的推荐:<br / >
+                              <textarea name="tj" id="tj" cols="70" rows="10">请写出您觉得推荐的地方和推荐的理由！ </textarea>
+                         <p align="center">
+                                <input type="submit" name="tj" id="tj" />
+                           &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="reset" name="cz" id="cz" />
+                            </p>  
+                           </form>
+            </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<!-- 如果我们使用的是JSX，则要为<script>标签的type属性设置text\babel -->
+	<script type="text/babel">
+		// 将一个h1标题插入id="example"节点中
+		ReactDOM.render(
+		     <h1>Hello,World</h1>,
+			 document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

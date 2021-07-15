@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多表单</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    </head>
+	<body>
+		<div id="example"></div>
+		<script type="text/babel">
+			class Reservation extends React.Component{
+				state={
+					isGoing:true,
+					numberOfGuests:2
+				};
+				handleInputChange=(event)=>{
+					const value=event.target.type==='checkbox'? event.target.checked:event.target.value;
+					const name=event.target.name;
+					this.setState({[name]:value});
+				}
+				render(){
+					return(
+					<form>
+						<label>
+						    是否离开:
+						    <input 
+							type="checkbox" 
+							name="isGoing" 
+							checked={this.state.isGoing} 
+							onChange={this.handleInputChange}/> 
+						</label>
+						<br />
+						<label>
+							访客数:
+							<input
+							 type="number"
+							 name="numberOfGuests" 
+							 value={this.state.numberOfGuests} 
+							 onChange={this.handleInputChange}/> 
+						</label>
+					</form>
+					);
+				}
+			}
+			ReactDOM.render(
+			  <Reservation />,
+			  document.getElementById('example')
+			);	
+		</script>	
+	</body>
+</html>

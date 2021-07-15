@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+         <head>
+               <meta charset="utf-8" />
+               <title>css选择器</title>
+<!--css有三种选择器，如下面的body,hr是标签选择器，.h1是类选择器，#h2是id选择器，他在一个页面中只能引用一次-->
+               <style type="text/css">
+               body{ 
+                         background-color:#ccc; /*设置背景颜色为灰色*/
+                         text-align:center;     /*设置文本内容居中*/
+                         font-size:12px;       /*设置文字大小为12像素*/
+                 } 
+                hr{width:200px;}
+                .h1{
+                         font:"黑体";     /*设置文字字体为黑体*/
+                         font-size:20px;         
+                 }
+                #p span{ 
+                         color:red;             /*设置文字颜色为红色*/
+                         font-size:16px;
+                 }
+                p,h2{
+                          color:blue;
+                 }
+               </style>
+         </head>
+         <body>
+             <h1 class="h1">CSS选择器</h1>
+             <hr />
+              <h2>CSS选择器的三种类别：</h2>
+               <p id="p"><span>标签</span>选择器，<span>类</span>选择器，<span>ID</span>选择器（一个页面只能引用<span>一次</span>）。</p>
+         </body>
+</html>

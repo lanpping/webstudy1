@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主轴方向与换行</title>
+    <style>
+        .div0{
+            width: 300px;
+            /* height: 200px; */
+            background-color: pink;
+            display: flex;
+            /* 改变主轴方向，默认是水平的row,从左到右 改成row-reverse是从右到左*/
+            /*flex-direction: row;*/
+            /* 默认不换行 */
+            /*flex-wrap: wrap; */
+            /* 是direction wrap的结合 */
+            flex-flow: row wrap;
+
+        }
+        .div0 div{
+            /* 整个盒子宽度只有300，所以会自动压缩各个子div,即使设置成了100px,实际布局是75px ，但是在添加了换行以后，就不会压缩了*/
+            width: 100px;
+            height: 100px;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div0">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

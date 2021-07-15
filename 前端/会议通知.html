@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>党小组会</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.date.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+	    
+	    header {
+	        width: 100%;
+	        height: 44px;                                                                            
+	        border-bottom: 1px solid #ececec;
+	    	position: relative;
+	    	background-color: #FF0000;
+	    	color: #FFFFFF;
+	    }
+	    header h1{
+	        width: 100%;
+	        height: 44px;
+	        line-height: 44px;
+	        text-align: center;
+	        font-size: 15px;
+	        box-sizing: border-box;
+	    }
+	    		
+	    header .arrow {
+	        position: absolute;
+	        left: 0;
+	        bottom: 0;
+	        width: 44px;
+	        height: 44px;
+	        background-image:url(../image/go_back.png);
+	        background-repeat: no-repeat;
+	        background-size: 20px 20px;
+	        background-position: center center;
+	    }
+	    header .release{
+	    	position: absolute;
+	    	width: 44px;
+	    	height: 44px;
+	    	line-height: 44px;
+	    	right: 0px;
+	    	top: 0px;
+	    	font-size: 12px;
+	    } 
+		body{
+				 width: 100%;
+		   
+				 background-color: #CCCCCC; 
+				 margin: 0 auto;
+		 }
+		.main{ 
+			 display: flex;
+			 flex-direction: column;
+			 font:"黑体"; 
+		     font-size: 17px;
+		     padding-left: 5px;
+			 height: 100%;
+				 
+		}
+		
+		.myrow{
+				  position: relative;
+				  height: 37px;
+				  width: 100%;
+				   flex:1 ;
+				  line-height: 37px;
+				  background-color: #FFFFFF;
+				  margin-bottom: 5px;
+				  
+				  
+		}
+		.contents{
+				text-align: center;
+				width: 100%;
+				
+				  
+		}
+		.rowname{
+				  padding-left: 10px;
+		 }   
+		
+		.noborder{
+			border: none;
+			position: absolute;
+			left: 200px;
+			top:10px;
+			outline: none;
+			
+		}	 
+		.jiangtou{
+			width:85%;
+			position: absolute;
+			
+		}
+		.gao{
+				  width: 100%;
+				  height: 250px;
+				  border-top:1px solid #CCCCCC;
+				  padding-top:10px;
+				  border-left: none;
+		} 
+	      </style>
+	  </head>
+	  <body>
+		  <header id="header">
+		          <div class="arrow" ></div>
+		          <h1>会议通知</h1>
+		  		<div class="release">发布</div>
+		  </header>
+	      <div id="main">
+			  <div class="myrow">
+					<div class="rowname">会议主题</div>
+					<div class="contents">
+						<input type="text" placeholder="请输入会议主题" class="noborder"/>
+						</div>
+			  </div>
+			  
+			  <div class="myrow">
+			        <div class="rowname">会议类型</div>
+			        <div class="contents">
+						<input type="text" placeholder="请输入会议类型" class="noborder"/>
+					</div>
+			  </div>
+			  
+			  <div class="myrow">
+	                <div class="rowname">支部名称</div>
+					<div class="contents">
+						<input type="text" placeholder="请输入支部名称" class="noborder"/>
+					</div> 
+			  </div>
+			  
+			  <div class="myrow">
+					<div class="rowname">会议地点</div>
+					<div class="contents">
+						<input type="text" placeholder="请输入会议地点" class="noborder"/>
+					</div>  
+			  </div>
+			  
+			   
+			   <div class="myrow">
+					  <div class="rowname">开始时间</div>
+					 <div class="contents">
+					 <!-- 	<input type="datetime" placeholder="请选择会议开始时间" class="noborder" id="startCreatetime"/> -->
+						<input type="text" id="date3" class="noborder" data-options="{'type':'YYYY-MM-DD hh:mm','beginYear':2010,'endYear':2088}" style="width:166px;height:19px;">
+					 </div>
+					 
+				</div>
+					  
+				<div class="myrow">	  
+					  <div class="rowname">结束时间</div>
+					  <div class="contents">
+					  	<input type="datetime" placeholder="请选择会议结束时间" class="noborder" id="endCreatetime"/>
+					  </div>
+					 
+				</div>  
+					  
+				<div class="myrow">	  
+					  <div class="rowname">参会人员 </div>
+					  <div class="contents">
+					  	<input type="text" placeholder="请输入参会人员" class="noborder"/>
+					  </div>  
+				</div>
+				   
+	
+	      </div>
+		  
+	       <script type="text/javascript">
+			   $.date('#date3');
+	       			//日期设置，不可选择今日之后的日期
+	       			$(function() {
+	       				var now = new Date();
+	       				var year = now.getFullYear();
+	       				var month = now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1)
+	       						: (now.getMonth() + 1);
+	       				var day = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+	       				var hour=now.getHours();
+	       				var minute=now.getMinutes();
+	       				var seconds=now.getSeconds();
+	       				$("#startCreatetime").attr("max", year + "-" + month + "-" + day+"-"+hour+"-"+minute+"-"+seconds);
+	       				$("#endCreatetime").attr("max", year + "-" + month + "-" + day+"-"+hour+"-"+minute+"-"+seconds);
+	       			})
+					
+					</script>
+	  </body>
+</html>
+

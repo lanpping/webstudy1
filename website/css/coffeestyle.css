@@ -1,0 +1,157 @@
+                   *{
+                        margin:0;
+                        padding:0;
+                   }
+                   body{
+                        color:#673929;
+                        font-size:16px;
+                   }
+                   #container{
+                         margin:0 auto;
+                         width:900px;
+                   }
+                   #header{
+                         height:220px;  /*必须添加，否则header下面有10px而不是5px空白*/
+                         margin-bottom:5px;
+                         position:relative;/*在其上面添加小图标*/
+                   }
+                   #icon-list{
+                         position:absolute;
+                         top:170px;
+                         right:30px;
+                         width:130px;
+                         height:30px;
+                   }
+                   #nav{
+                         height:30px;
+                         line-height:30px;
+                         color:#fff;
+                         margin:5px;
+                         font:18px/30px; /*斜杆隔开的是行高30px*/
+                         background-color:#09c;
+                         letter-spacing:2px; /*每个字符的间距*/
+                         text-align:center;
+                   }
+                   #nav a{
+                         text-decoration:none;
+                   }
+                   a:link{
+                          color:#fff;
+                   }
+                   a:visited{
+                          color:#fff;
+                   }
+                   a:hover{
+                          color:yellow;
+                   }
+                   a:active{
+                          color:yellow;
+                   }
+                   #main{
+                      /*   height:2050px; 加上文字以后，发现留有高度太高*/ 
+                         background-color:#000;
+                   }
+                   #aside{
+                         float:left;
+                         width:300px;
+                      /*   height:700px; */
+                         background-color:#6cf;
+                         text-align:center;
+                        font-size:14px;
+                        color:#000;
+                   }
+                   #aside h2{
+                          margin:20px;
+                  }
+                  #imglist{
+                           width:130px;
+                            margin:0 auto;
+                 }
+                 .pol{
+                            width:85px;
+                            padding:10px;
+                            background-color:#eee;
+                            border:1px solid #bfbfbf;
+                            box-shadow:2px 2px 4px #aaa;
+                            border-radius:5px;
+                 }
+                 #imglist img{
+                            height:95px;
+                            width:85px;
+                            margin:0 auto;
+                }
+                 .rotate-left{
+                             -webkit-transform:rotate(7deg);                              
+                             -ms-transform:rotate(7deg);
+                             -o-transform:rotate(7deg);
+                             -moz-transform:rotate(7deg); /* Firefox */
+                             transform:rotate(7deg);
+                 }
+                 .rotate-right{
+                             -webkit-transform:rotate(-7deg); /* Safari and Chrome */                      
+                             -ms-transform:rotate(-7deg);/* IE 9 */
+                             -o-transform:rotate(-7deg);/* Opera */
+                             -moz-transform:rotate(-7deg); /* Firefox */
+                             transform:rotate(-7deg);                        
+                 }
+                #imglist img{
+	                  height: 95px;
+	                  width: 85px;
+	                  margin: 0 auto;
+	                  font-size: 0;
+                 }
+                #imglist img:hover{
+	                 -webkit-transform: scale(1.2);
+	                  -moz-transform: scale(1.2);
+	                  -ms-transform: scale(1.2);
+	                 -o-transform: scale(1.2);
+	                 transform: scale(1.2);
+                   }
+                   #content{
+                         float:right;
+                         width:595px;
+                      /*   height:2050px; 加上文字以后，发现留有高度太高 */
+                         background-color:#cff;
+                         margin-bottom:5px;
+                   }
+                   .subcon{
+                         width:570px;
+                         margin:10px auto;
+                         clear:both;
+                   }
+                   .subcon img{
+                          margin:5px;
+                          padding:5px;
+                          float:left;
+                          border:1px dashed #000;
+                   }
+                   .subcon .subtext{
+                          width:60%;
+                          float:left;
+                          margin:5px;
+                   }
+                   .subcon h2{
+                          margin:5px;
+                   }
+                   .subcon p{
+                           font:16px/2em;
+                   }
+                   #footer{
+                         height:60px;
+                         line-height:60px;
+                         background-color:#6cf;
+                         clear:both;/*因为它上面有个主体部分，所以防止上移占位*/
+                         text-align:center;
+                   }
+                   #footer p{
+                           font:16px/2em;
+                  }
+                   #l-fix{
+                          position:fixed;/*不会随滚动条滚动而滚动，总在视线内*/
+                          top:100px;
+                          left:5px;
+                   }
+                   #l-fix img{
+                          height:100px;
+                          width:100px;
+                   }        

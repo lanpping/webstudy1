@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+         <head>
+              <meta charset="utf-8">
+              <title>布局3</title>
+              <style type="text/css">
+                   *{
+                        margin:0;
+                        padding:0;
+                   }
+                   body{
+                        font-size:14px;
+                   }
+                   #container{
+                         margin:0 auto;
+                         width:1000px;
+                         height:500px;
+                        /* background-color:#6cf;*/
+                   }
+                   #aside{
+                         float:left;
+                         width:300px;
+                         height:500px;
+                         background-color:#6cf;
+                   }
+                   #content{
+                         float:right; /*这样左右之间会有5个像素的空隙，当此处也是向左浮动，则不会有空隙，若想有空隙则在aside或content加上属性margin-right/left:5px;*/
+                         width:695px;
+                         height:500px;
+                         background-color:#cff;
+                   }
+              </style>
+         </head>
+         <body>
+                 <div id="container">
+                         <div id="aside">
+                         </div>
+                         <div id="content">
+                         </div>                         
+                 </div>
+         </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="example"></div>
+<script type="text/babel">
+{/*// 将要展示的部分封装成一个组件
+ // 第一种方法：用函数来定义一个组件*/}
+{/*function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>现在是 {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}*/}
+{/*第二种方法，用React.Component 的 ES6 类l来都定义一个组件，该类封装了要展示的元素，
+注意的是在 render() 方法中，需要使用 this.props 替换 props：*/}
+{/*类名要大写字母开头*/}
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>现在是 {this.props.date.toLocaleTimeString()}.</h2>
+		<h3>Hello,{this.props.nicheng}</h3>
+      </div>
+    );
+  }
+}
+{/*<!-- 通过组件类的defaultProps属性为props设置默认值 -->*/}
+Clock.defaultProps={
+	nicheng:'China'
+};
+
+function tick() {
+  ReactDOM.render(
+    <Clock date={new Date()} />,
+    document.getElementById('example')
+  );
+}
+
+setInterval(tick, 1000);
+</script>
+
+</body>
+</html>

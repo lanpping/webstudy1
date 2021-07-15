@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>State状态</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+<!-- 只需更新组件的state，然后根据新的state重新渲染用户界面（不要操作DOM） -->
+		<div id="example"></div>
+		<script type="text/babel">
+	{/*定义一个类构造函数初始化状态this.state,类组件应该始终用props调用基础构造函数*/}
+			class Clock extends React.Component {
+			  constructor(props) {
+			    super(props);
+			    this.state = {date: new Date()};
+			  }
+	// {/*下面两个函数被称作生命钩子*/}
+// {/*挂载：当组件输出到DOM后执行此函数，我们便可在这个钩子上设置一个定时器，每秒钟调用一次tick(),this..timeID为定时器ID*/}
+			componentDidMount(){
+				this.timeID=setInterval(
+				()=>this.tick(),1000
+				);
+			}
+// {/*卸载：一旦Clock组件从DOM中移除，React就会调用此函数，也就会清除定时器*/}
+			componentWillUnmount(){
+				clearInterval(this.timeID);
+			}
+// {/*调用此方法，React知道状态已经改变，会再次调render(),此时这个this.state不同，就渲染出将更新的时间相应更新DOM*/}
+			tick(){
+				this.setState({date:new Date()});
+			}
+			  render() {
+			    return (
+			      <div>
+			        <h1>Hello, world!</h1>
+			        <h2>现在是 {this.state.date.toLocaleTimeString()}.</h2>
+			      </div>
+			    );
+			  }
+			}
+			
+			ReactDOM.render(
+			  <Clock />,
+			  document.getElementById('example')
+			);
+		</script>
+	</body>
+</html>

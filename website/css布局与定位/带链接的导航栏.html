@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+       <head>
+             <meta charset="utf-8" />
+             <title>导航栏</title>
+             <style type="text/css">
+               *{
+                   margin:0;
+                   padding:0;
+               }
+               #nav{
+                   width:300px;
+                   font-size:0; /*保证链接之间没有空隙*/
+                   margin:100px auto;   /*保证div水平居中*/
+               }
+               a{
+                     display:inline-block;  /*将其转化为inline-block元素，以便为了后面对宽度和高度的设置*/
+                     width:80px;
+                     height:30px;
+                     line-height:30px;  /*高度相同，保证文字垂直居中*/
+                     font-size:14px;
+                     text-align:center;
+                     text-decoration:none;  /*消除链接所带的下划线*/
+                     border-bottom:1px solid #ccc;
+               }
+               a:hover{
+                     color:white;
+                     background-color:#ccc;
+                     border:1px solid;
+                     border-left-color:orange;  /*让边框的上左右颜色变为橘色*/
+                     border-right-color:orange;
+                     border-top-color:orange;
+               }
+             </style>
+       </head>
+       <body>
+           <div id="nav">
+             <a href="http://www.baidu.com">百度</a>
+             <a href="http://www.people.cn">人民网</a>
+             <a href="http://www.cctv.com">央视网</a>
+          </div>
+       </body>
+</html>

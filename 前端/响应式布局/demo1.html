@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入框布局</title>
+    <style>
+        .div0{
+            width: 250px;
+            display: flex;
+            border: 1px solid grey;
+        }
+        .div0 label{
+            flex: 1;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .div0 input{
+            /* 无边框，但是只设置此属性点击input时边框还是出现 */
+            border: none;
+            /* 点击输入框时边框也不会出现 */
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div0">
+        <label>姓名</label>
+        <input type="text"/>
+        <label>go</label>
+    </div>
+</body>
+</html>

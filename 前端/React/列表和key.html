@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>列表和key</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="example"></div>
+		<script type="text/babel">
+			class Blog extends React.Component{
+		render(){
+				return(
+				<div>
+				{
+					 this.props.posts.map((post)=>
+					 <div key={post.id}>
+						 <h3>{post.title}</h3>
+						 <p>{post.content}</p>
+						 <hr/> 
+			        </div>	     
+				 )
+				}
+			</div>
+				);}
+		    }
+			const posts=[{id:'1',title:'name',content:'welcome'},{id:'2',title:'gretting',content:'welcome too'}];
+			ReactDOM.render(<Blog posts={posts}/>,document.getElementById('example'));
+			
+		</script>
+	</body>
+</html>

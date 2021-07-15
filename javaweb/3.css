@@ -1,0 +1,48 @@
+@charset"utf-8";
+*{
+   margin:0;
+   padding:0;
+}
+#header{
+   background-color:blueviolet;
+   color:#ffffff;
+   padding:10px;
+   text-align:center;
+}
+
+#zw{
+   height:500px;
+   background:darkcyan;
+}
+
+#left{
+   background-color:yellowgreen;
+   float:left;
+   width:200px;
+   height:100%;
+}
+
+#right{
+   background-color:darkslategray;
+   float:right;
+   width:200px;
+   height:100%;
+   color:white;
+}
+
+#center{
+position:absolute;
+left:200px;
+right:200px;
+background:darkgray;
+height:500px;
+}
+
+#footer{
+   background-color:blueviolet;
+   color:#ffffff;
+   padding:5px;
+   text-align:center;
+   clear:both;
+}
+

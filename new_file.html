@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			function decide(str1, str2) {
+			  str2 = str2.split('')
+			  str1 = str1.split('')
+			  if (str2.length < str1.length) return false;
+			  let num = str1.length
+			  let first = str1.shift()
+			  let counter = 0
+			  for (let i = 0; i < str2.length; i++) {
+			    if (first === str2[i]) {
+			      counter++;
+			      first = str1.shift()
+			
+			    }
+			  }
+			  return num === counter
+			}
+console.log(decide("abcd","adbdc"));
+			
+		</script>
+	</body>
+</html>

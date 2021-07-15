@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文字滚动</title>
+		<!-- 也可以图片滚  -->
+		<style>
+			.div1{
+				margin: 0 auto;
+				height: 200px;
+				width: 500px;
+				background-color: #CCCCCC;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<marquee class="m1" align="absbottom" behavior="alternate" bgcolor="#7FFF00" direction="down" scrollamount="10" onmouseout="this.start()" onmouseover="this.stop()">
+				我是绝对底部对齐，在两端之间来回滚动，活动字幕是向下滚动，滚动速度为10pixels,鼠标移开我就继续滚动，鼠标一进来我就停止！
+			</marquee>
+		</div>
+		<div class="div1">
+			<marquee class="m2" height="200px" align="middle" behavior="scroll" bgcolor="#0000FF" direction="left" scrollamount="10" onmouseout="this.start()" onmouseover="this.stop()">
+				我是中间对齐，在一端到另一端重复滚动，活动字幕是向左（也是默认的）滚动，滚动速度为10pixels,鼠标移开我就继续滚动，鼠标一进来我就停止！
+			</marquee>
+		</div>
+		<div class="div1">
+			<marquee class="m3" height="200px" align="top" behavior="slide" bgcolor="#FFC0CB" direction="right" scrollamount="10" onmouseout="this.start()" onmouseover="this.stop()">
+				我是中间对齐，在一端到另一端，不重复滚动，活动字幕是向右滚动，滚动速度为10pixels,鼠标移开我就继续滚动，鼠标一进来我就停止！
+			</marquee>
+		</div>
+	</body>
+</html>

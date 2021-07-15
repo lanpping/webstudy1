@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>索引数组即下标为数字的数组</title>
+	</head>
+	<body>
+		<script>
+			<!-- 创建数组的几种方法 -->
+			var arr1=[];
+			<!-- 不限制数组的长度即长度可变，不限制数据类型 -->
+			var arr2=[91,"good",99,"pefect"];
+			var arr3=new Array();
+			<!-- 表示arr4.length=5 -->
+			var arr4=new Array(5);
+			var arr5=new Array("Tom","张","李");
+			// 当获取越界元素时，显示undefined,不会报错，
+			// 若是修改越界元素，不报错知识在指定下标下创建新元素
+			for(var i=0;i<=arr2.length;i++){
+				document.write(arr2[i]);
+				document.write('<br />');
+			}
+		</script>
+		
+	</body>
+</html>

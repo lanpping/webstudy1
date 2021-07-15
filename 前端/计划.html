@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计划</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.noborder{
+				border: none;
+				position: absolute;
+				left: 200px;
+				top:10px;
+				outline: none;
+				
+			}
+			header {
+		        width: 100%;
+		        height: 44px;                                                                            
+		        border-bottom: 1px solid #ececec;
+				position: relative;
+				background-color: #FF0000;
+				color: #FFFFFF;
+		    }
+		    header h1{
+		        width: 100%;
+		        height: 44px;
+		        line-height: 44px;
+		        text-align: center;
+		        font-size: 15px;
+		        box-sizing: border-box;
+		    }
+		
+		    header .arrow {
+		        position: absolute;
+		        left: 0;
+		        bottom: 0;
+		        width: 44px;
+		        height: 44px;
+		        background-image:url(../image/go_back.png);
+		        background-repeat: no-repeat;
+		        background-size: 20px 20px;
+		        background-position: center center;
+		    }
+			header .release{
+				position: absolute;
+				width: 44px;
+				height: 44px;
+				line-height: 44px;
+				right: 0px;
+				top: 0px;
+				font-size: 12px;
+			}
+			li{
+					list-style: none;  
+					position: relative;
+					border-bottom: 1px solid #ccc;
+					background-color: #fff;
+				}
+				@keyframes mychuang{
+					0%{
+						bottom: 0;
+						right: 0;
+					}
+					100%{
+						right:50%;
+						bottom: -100px;
+						transform: translate(50%,-50%);
+					}
+				}
+			    body{
+						 width: 100%;
+			       
+						 background-color: #CCCCCC; 
+						 margin: 0 auto;
+			     }
+			    .main{ 
+					 display: flex;
+					 flex-direction: column;
+					 font:"黑体"; 
+			         font-size: 17px;
+				     padding-left: 5px;
+					 height: 100%;
+						 
+			    }
+			    
+			    .myrow{
+						  position: relative;
+						  height: 37px;
+						  width: 100%;
+						   flex:1 ;
+						  line-height: 37px;
+						  background-color: #FFFFFF;
+						  margin-bottom: 5px;
+						  
+						  
+				}
+				.contents{
+						text-align: center;
+						width: 100%;
+						  
+			    }
+			    .rowname{
+						  padding-left: 10px;
+			     }
+			    .btn{
+						  position: absolute;
+						  right: 10px;
+						  text-decoration: none;
+						  outline: none;
+						  color: #CCCCCC;
+						  transform: rotate(90deg);
+						  top: 0;
+			     }
+					 
+				.gao{
+						  width: 100%;
+						  height: 250px;
+						  border-top:1px solid #CCCCCC;
+						  padding-top:10px;
+						  border-left: none;
+				}
+				.chuang{
+				      width: 100%;
+						  height: 250px;
+						  background-color:#FFFFFF;
+						  position: absolute;
+						  /* right:50%; */
+						  /* transform: translateX(50%); */
+						  bottom: 0;
+						  right: 0;
+						  z-index: 100;
+						  display: none;
+						  border: 1px solid #CCCCCC;
+						  border-radius: 8px;
+						  overflow: auto;
+						  color: pink;
+			
+				}
+				.chuang>input{
+						  width: 53px;
+						  height: 28px;
+						  position: absolute;
+						  right: 6px;
+						  color:#FFFFFF ;
+						  background-color: pink;
+						  border: 0;
+						  text-align: center;
+						  margin: 10px 0; 
+						
+			    }
+					  
+					  
+			.Checkbox {
+			    position: absolute;
+			    visibility: hidden;
+			
+			}
+			input[checked=true] .Checkbox+label{
+				background-color: pink;
+			}
+			.Checkbox+label {
+			    position:absolute;
+				right: 10px;
+			    width: 16px;
+			    height: 16px;
+			    border: 1px solid papayawhip;
+			    border-radius: 50%;
+			    background-color:pink;
+			} 
+			.Checkbox:checked+label:after {
+			    content: "";
+			    position: absolute;
+			    left: 2px;
+			    top:2px;
+			    width: 9px;
+			    height: 4px;
+			    border: 2px solid #FFFFFF;
+			    border-top-color: transparent;
+			    border-right-color: transparent; 
+			    transform: rotate(-45deg);
+			    -ms-transform: rotate(-60deg);
+			    -moz-transform: rotate(-60deg);
+			    -webkit-transform: rotate(-60deg);
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header id="header">
+		        <div class="arrow" ></div>
+		        <h1>支部成员</h1>
+				<div class="release">发布</div>
+		</header>
+		<div class="main">
+			<div class="myrow">
+				<div class="rowname">活动主题</div>
+				<div class="contents">
+					<input type="text" placeholder="请输入活动主题" class="noborder"/>
+				</div>
+			</div>
+			
+			<div class="myrow">
+				<div class="rowname">支部名称</div>
+				<div class="contents">
+					<input type="text" placeholder="请输入支部名称" class="noborder"/>
+				</div>
+			</div>
+			
+			<div class="myrow">
+				<div class="rowname">活动地点</div>
+				<div class="contents">
+					<input type="text" placeholder="请输入活动地点" class="noborder"/>
+				</div>
+			</div>
+			
+			<div class="myrow">
+				<div class="rowname">主持人</div>
+				<div class="contents">
+					<input type="text" placeholder="请输入主持人" class="noborder"/>
+				</div>
+			</div>
+			
+			<div class="myrow">
+				<div class="rowname">计划时间</div>
+			    <div class="contents">
+					<input type="text" placeholder="请选择计划时间" class="noborder time"/>
+				</div>
+				<a href="javascript:;"  class="btn">></a>
+			</div>
+			
+			<div class="chuang">
+					<ul class="a">
+						<li>
+							1月<input type="radio" name="mouth" id="cheack1" class="Checkbox zhi" value="1月" />
+							<label for='cheack1'></label>
+						</li>
+						<li>
+							2月<input type="radio" name="mouth" id="cheack2" class="Checkbox zhi" value="2月" />
+							<label for='cheack2'></label>
+						</li>
+						<li>
+							3月<input type="radio" name="mouth" id="cheack3" class="Checkbox zhi" value="3月"  />
+							<label for='cheack3'></label>
+						</li>
+						<li>
+						    4月<input type="radio" name="mouth" id="cheack4" class="Checkbox zhi" value="4月"/>
+							<label for='cheack4'></label>
+						</li>
+						<li>
+							5月<input type="radio" name="mouth" id="cheack5" class="Checkbox zhi" value="5月"/>
+							<label for='cheack5'></label>
+						</li>
+						<li>
+							6月<input type="radio" name="mouth" id="cheack6" class="Checkbox zhi" value="6月" />
+							<label for='cheack6'></label>
+						</li>
+						<li>
+							7月<input type="radio" name="mouth" id="cheack7" class="Checkbox zhi" value="7月" />
+						<label for='cheack7'></label>
+						</li>
+						<li>
+							8月<input type="radio" name="mouth" id="cheack8" class="Checkbox zhi" value="8月"  />
+							<label for='cheack8'></label>
+						</li>
+						<li>
+							9月<input type="radio" name="mouth" id="cheack9" class="Checkbox zhi" value="9月"/>
+							<label for='cheack9'></label>
+						</li>
+						<li>
+							10月<input type="radio" name="mouth" id="cheack10" class="Checkbox zhi" value="10月" />
+							<label for='cheack10'></label>
+						</li>
+						<li>
+							11月<input type="radio" name="mouth" id="cheack11" class="Checkbox zhi" value="11月" />
+							<label for='cheack11'></label>
+						</li>
+						<li>
+							12月<input type="radio" name="mouth" id="cheack12" class="Checkbox zhi" value="12月"  />
+							<label for='cheack12'></label>
+						</li>			
+					</ul>
+					<input type="button" value="确认"  onclick="ok()"/>
+			</div>
+			<div class="myrow">
+				<div class="rowname">活动内容</div>
+				<div class="contents">
+					<textarea class="gao" onfocus="this.value='';this.onfocus=null;">&emsp;请添加计划的活动内容(必填项)</textarea>
+				</div>
+			</div>
+		</div>	
+			<script type="text/javascript">
+				var chuang=document.querySelector('.chuang');
+				var btn=document.querySelector('.btn');
+				var inputs=document.querySelectorAll('.zhi');
+				var time=document.querySelector('.time');
+			btn.addEventListener('click',()=>{
+				chuang.style.display="block";
+				
+				chuang.style.animation=" mychuang 1s ease 1 forwards";
+							  
+			})
+			function ok(){
+				for(let i=0;i<inputs.length;i++){
+					if(inputs[i].checked){
+						console.log(inputs[i].value)
+						time.value=inputs[i].value;
+						chuang.style.display="none"
+					}
+				}
+			}	
+			</script>
+		
+	</body>
+</html>

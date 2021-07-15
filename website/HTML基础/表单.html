@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+         <head>
+                <meta charset="UTF-8" />
+                 <title> my form</title>
+				 
+         </head>
+         <body>
+                 <form>
+                       账户：<input type="text" name="username" placeholder="请输入账号" />
+                      <br />
+                       密码：<input type="password" name="userpass" />
+                      <br />
+                       爱好：<input type="text" name="hobby" />
+                                <input type="submit" value="确定" name="hobby" />
+                                 <input type="reset" value="重置" name="hobby" />
+<!--value是为设置这个按钮在页面上显示的文字-->
+                      <br />
+                       性别：
+                              男：<input type="radio" value="boy" name="gender" checked="cheched" /> <!--cheched="checked"表示该选项为默认选项-->
+                              女：<input type="radio" value="girl" name="gender" />
+                      <br />
+                       爱好：<input type="checkbox" value="1" name="music" checked="checked" />音乐
+<input type="checkbox" value="2" name="sport"  />体育
+<input type="checkbox" value="3" name="reading"  />阅读
+                      <br />
+					  
+                      爱好：<select style="width: 100px;">
+                                    <option>看书</option>
+                                    <option >旅游</option>
+                                    <option>运动</option>
+                                    <option>购物</option>
+                                 </select>
+								
+                      <br />
+                      个人简介：
+                      <br />
+                      <textarea rows="10" cols="30" onfocus="this.value='';this.onfocus=null;">在这里输入内容</textarea>
+                      <br />
+                                  <input type="submit" value="提交" name="submit" />
+                                 <input type="reset" value="重置" name="reset" />
+						<br />
+						
+						<input type="datetime-local" placeholder="请选择时间"/>
+                 </form>
+         </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 内嵌js -->
+	<script>
+		alert("嵌入js代码，页面加载就会执行");
+	</script>
+	<!-- 外部js -->
+	<script src="../js/pop.js"> <!--可以输入script:src-->
+		alert("此处不能写js代码，不会被执行");
+	</script>
+</head>
+<body>
+	<!-- 行内 -->
+	<button  onclick="alert('行内js代码,button')">单击试试</button>
+</body>
+</html>

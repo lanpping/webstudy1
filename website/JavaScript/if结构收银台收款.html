@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <title>购物车2</title>
+</head>
+<body>
+        <script type="text/javascript">
+             var price,count,money;
+             var total,change;
+             price=prompt("请输入单价:");
+             count=prompt("请输入购买数量:");
+             total=price*count;   
+             if(total>=500){
+                    alert("您的消费总额已大于等于500元，可享受八折优惠!");
+                    total=total*0.8;
+             }
+             alert("您的消费总额为"+total+"元");
+             money=prompt("收款:");
+             if(money>=total){
+                 change=money-total;
+                  alert("找您"+change+"元");
+             }else{
+                  alert("您给的钱不够，请再给点!");
+             }
+        </script>
+</body>
+</html>

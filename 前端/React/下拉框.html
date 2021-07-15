@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下拉框</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="example"></div>
+		<script type="text/babel">
+			class FlavorForm extends React.Component{
+				state={value:'对不起，未提交！'};
+				handleChange=(event)=>{
+					this.setState({value:event.target.value});
+				}
+				handleSubmit=(even)=>{
+				    alert('你最喜欢的网站是：'+this.state.value);
+					event.preventDefault();
+				}
+				render(){
+					return(
+					    <form  onSubmit={this.handleSubmit}>
+{/*label为input元素定义标注，在label元素内点击文本，浏览器就会自动将焦点转到和label标签相关的表单控件上 */}
+						    <label>
+							     你最喜欢的网站是
+{/*在 React 中，不使用 selected 属性，而在根 select 标签上用 value 属性来表示选中项*/}
+							     <select value={this.state.value} onChange={this.handleChange}>
+								    <option value='gg'>google</option>
+									<option value='ro'>runoob</option>
+									<option value='tb'>taobao</option>
+									<option value='mk'>muke</option>
+								 </select>
+							</label>
+							<input type="submit" value="提交" />
+						</form>
+					);
+				}
+			}
+			ReactDOM.render(
+			<FlavorForm />,
+			document.getElementById('example')
+			);
+		</script>
+	</body>
+</html>

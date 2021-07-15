@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js实现自动调整字体大小</title>
+    <!-- 当然也可以用媒体查询加rem来实现 -->
+    <style>
+        html{
+            font-size: 20px;
+        }
+        div{
+             
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div>123456</div>
+    <!-- 实现一个函数来根据不同尺寸屏幕改变字体，这样上述的html的font-size设置与否无关紧要了 -->
+    <script>
+        var c=()=>{
+            let w=document.documentElement.clientWidth;
+            //各种尺寸里面字号不超过40
+            let n=(20*(w/320)>40?40+"px":(20*(w/320)+"px"));
+            window.addEventListener("load",c);
+            window.addEventListener("resize",c);
+        }
+    </script>
+</body>
+</html>

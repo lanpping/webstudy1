@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var flag=true;//用来标识是不是质数。先默认是质数
+			var nums=prompt("请输入一个大于1的数字：");
+			if(isNaN(nums)||nums<=1){
+				nums=prompt('该值不合法，请输入一个大于1的数字:');
+			}else{
+				for(i=2;i<nums;i++){
+					if(nums%i==0){
+						// 如果能被其他数整除，表明不是质数
+						flag=false;
+						break;//一旦不是就可以终止循环
+						
+					}
+				}
+			}
+			if(flag){
+				alert(nums+"是质数");
+			}else{
+				alert(nums+"不是质数");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background-color: #CCCCCC;
+			}
+			.header{
+				height: 30px;
+				width: 100%;
+				background-color: red;
+				position: relative;
+				text-align: center;
+				color:#CCCCCC;
+			}
+			.header .left{
+				position: absolute;
+				left:3px;
+				color: #CCCCCC;}
+			.header .right{
+				position: absolute;
+				top: 0;
+				right:3px;
+				color: #CCCCCC;}
+			
+			li{
+				list-style: none;  
+				position: relative;
+				border-bottom: 1px solid #ccc;
+				background-color: #fff;
+			}
+			input{
+				width: 10px;
+				height: 10px;
+			}
+			.Checkbox {
+			    position: absolute;
+			    visibility: hidden;
+			
+			}
+			input[checked=true] .Checkbox+label{
+				background-color: pink;
+			}
+			.Checkbox+label {
+			    position:absolute;
+				right: 10px;
+			    width: 16px;
+			    height: 16px;
+			    border: 1px solid papayawhip;
+			    border-radius: 50%;
+			    background-color:pink;
+			} 
+			.Checkbox:checked+label:after {
+			    content: "";
+			    position: absolute;
+			    left: 2px;
+			    top:2px;
+			    width: 9px;
+			    height: 4px;
+			    border: 2px solid #FFFFFF;
+			    border-top-color: transparent;
+			    border-right-color: transparent; 
+			    transform: rotate(-45deg);
+			    -ms-transform: rotate(-60deg);
+			    -moz-transform: rotate(-60deg);
+			    -webkit-transform: rotate(-60deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<p class="left"><</p>
+			选择中间人
+			<p class="right">完成</p>
+		</div>
+		<div class="kuang">
+			<ul class="a">
+				<li>
+					
+					全选<input type="checkbox" name="" id="cheack1" class="Checkbox" value="" onclick="selectAll()"/>
+					<label for='cheack1'></label>
+				</li>
+				<li>
+					全选<input type="checkbox" name="" id="cheack2" class="Checkbox" value="" />
+					<label for='cheack2'></label>
+				</li>
+				<li>
+					全选<input type="checkbox" name="" id="cheack3" class="Checkbox" value=""  />
+					<label for='cheack3'></label>
+				</li>
+				<li>
+					全选<input type="checkbox" name="" id="cheack4" class="Checkbox" value=""/>
+					<label for='cheack4'></label>
+				</li>
+			</ul>
+			
+		</div>
+		<script type="text/javascript">
+			let xuan=document.querySelectorAll('input')
+	        function selectAll(){
+			
+			for (let i = 1; i < xuan.length; i++) {
+					xuan[i].checked = xuan[0].checked;           
+			}
+			}
+			// function dan(e){
+			// 	let index=this.checked;
+			// 	console.log(e.target)
+			// 	for(let i=1;i<xuan.length;i++){
+			// 		if(xuan[i].checked!=index){
+			// 			index=0;
+			// 		}
+			// 	}
+			// 	if(index!=0){
+			// 		xuan[0].checked=index;
+			// 	}
+			// }
+			for(let i=1;i<xuan.length;i++){
+				    xuan[i].onclick=function(){
+						index=1;
+						for(let i=1;i<xuan.length;i++){
+							if(xuan[i].checked==false){
+								index=0;
+							}
+						}
+						if(index!=0){
+							xuan[0].checked=true;
+						}else{xuan[0].checked=false}
+					
+				}
+			}
+			
+		</script>
+	</body>
+</html>

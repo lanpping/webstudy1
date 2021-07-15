@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长表单布局</title>
+</head>
+<!-- 实现左边向右对齐即冒号对齐，输入框向左对齐 -->
+<style>
+    /* 与下面的那个样式设置 flex:0 0 50px所对应 */
+    #form{
+        display: flex;
+        flex-direction: column;
+    }
+    #form div{
+        display: flex;
+        /* 为了让上下两个div有一定的空隙，可使用margin-top 但是为了锻炼flex，不用此设置*/
+        /* margin-top: 10px; */
+
+/* 下面这两行作用与上述一句margin一样 */
+        /* height: 50px; */
+        /* 不加此行的话，那么input的高度也随之改变成50px */
+        align-items: flex-start;
+
+        /* 当我再增加样式即给#form也设置成弹性布局以后，height：50px就不用了，直接用下面flex属性， */
+        flex:0 0 50px;
+    }
+    #form div label{
+        /* 设置100px原因是“请输入密码”这几个字太长，如果字段更长所需超过100px，可能就要手动的将此100px扩大 */
+        flex:0 0 100px;
+        /* 向右对齐 */
+        text-align: right;
+    }
+</style>
+<body>
+    <form>
+        <div id="form">
+            <div>
+                <label>姓名：</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label>请输入密码：</label>
+                <input type="text" />
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

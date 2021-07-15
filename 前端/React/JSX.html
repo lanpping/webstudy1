@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JSX</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	    <style>
+			.foo{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			var i=1;
+			
+			{/*react会在指定元素数字后自动添加px*/}
+			var mystyle={
+				fontSize:100,
+				color:'blue'
+			};
+			
+			
+			var arr=[
+				<h4>学的不仅是技术</h4>,
+				<h4>更是梦想！</h4>
+			];
+			
+			{/*嵌套多个HTML标签用div元素包裹它*/}
+			const element=
+			<div>
+{/*一些标识符class和for不能作为XML属性名，用className和htmlFor代替*/}
+			   <h1 className="foo">HEllO</h1>
+			   
+			   {/*为h1添加内嵌样式*/}
+			   <h1 style={mystyle}>菜鸟教程</h1>
+			   
+	{/*要使用javascript表达式，表达式要写在花括号中*/}
+			   <h2>{1+1}</h2>
+			   
+{/*JSX不能使用if-else语句，即在return里面不能用，可以使用conditional(三元运算)表达式代替*/}
+			   <h3>{i==1 ? 'True!': 'False!'}</h3>
+			   
+	{/*JSX允许在模板中插入数组，数组会自动展开所有成员*/}
+			   {arr}
+			   
+			   {/*添加自定义属性，要加data-前缀*/}
+			   <p data-myattribute="somevalue">这是一个很不错的JS库</p>
+			  </div>;
+			ReactDOM.render(element,document.getElementById('root'))
+		</script>
+	</body>
+</html>

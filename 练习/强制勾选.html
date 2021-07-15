@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>强制勾选</title>
+	</head>
+	<body>
+		<div class="div01">
+			<h1>请选择发offer时间</h1>
+			<input type="checkbox" checked="checked" class="c1" onclick="c1()"/>马上
+			<input type="checkbox"  class="c1" onclick="c1()"/> 一周内
+			<input type="button" value="发放" onclick="give()" />
+		</div>
+		
+	</body>
+	<script>
+		function give(){
+			alert("OK!offer已发送！");
+		}
+		function c1(){
+		let co1=document.getElementsByClassName("c1")[0];
+		co1.checked="checked";
+		// 若想c2也强制勾选则再let co2;co2.checked="checked"即可
+		}
+	</script>
+</html>

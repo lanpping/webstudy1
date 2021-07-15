@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+                 <meta charset="utf-8" />
+                 <title>扑克牌翻转</title>
+                 <style type="text/css">
+                        *{
+                              margin:0;
+                              padding:0;
+                        }
+                        body{
+                              background-color:#0d3462; /*设置背景为深蓝色*/
+                        }
+                        #piclist{
+                              width:760px;
+                              height:220px;
+                              margin:100px auto;
+                        }
+                        .picbox{
+                             float:left;
+                             width:170px;
+                             height:190px;
+                             margin:10px;
+                             position:relation;/*不加这个层定位，正反两图片就不会叠加效果，而是一上一下*/
+                             -webkit-transform-style:preserve-3d;
+                             -moz-transform-style:preserve-3d;
+                             -ms-transform-style:preserve-3d;
+                             transform-style:preserve-3d;
+                             transition:1.5s;
+                        }
+                        .picbox:hover{
+                             transform:rotateY(180deg);   /*鼠标在上面时翻转180度*/
+                        }
+                        .face{
+                             width:170px;
+                             height:190px;
+                             position:absolute;/*不加这个层定位，正反两图片就不会叠加效果，而是一上一下*/
+                        }
+                        .front{
+                             border:2px solid #4b2518; /*棕色*/
+                        }
+
+                        .back{
+                             -webkit-transform:rotateY(180deg); /*这三行是让图片一开始就翻转，要不然下次文字翻转就是字就反着*/
+                             -o-transform:rotateY(180deg);
+                             -ms-transform:rotateY(180deg);
+                             transform:rotateY(180deg);
+                              background-color: #4b2518; 
+                              border:2px solid #fff;
+                        }
+                        .back h3{
+                              color:white;
+                              text-align:center;
+                        }
+                 </style>
+        </head>
+        <body>
+                  <div id="piclist">
+                         <div class="picbox">
+                            <div class="face front">
+                                      <img src="images/Espresso.jpg" />
+                             </div>
+                             <div class="face back">
+                                   <h3>浓缩咖啡</h3>
+                              </div>
+                          </div> 
+                         <div class="picbox">
+                            <div class="face front">
+                                      <img src="images/Cappuccino.jpg" />
+                             </div>
+                             <div class="face back">
+                                   <h3>卡布奇诺</h3>
+                              </div>
+                          </div> 
+                         <div class="picbox">
+                            <div class="face front">
+                                      <img src="images/Latte.jpg" />
+                             </div>
+                             <div class="face back">
+                                   <h3>拿铁</h3>
+                              </div>
+                          </div> 
+                         <div class="picbox">
+                            <div class="face front">
+                                      <img src="images/Mocha.jpg" />
+                             </div>
+                             <div class="face back">
+                                   <h3>摩卡</h3>
+                              </div>
+                          </div> 
+                  </div>
+        </body>
+</html>

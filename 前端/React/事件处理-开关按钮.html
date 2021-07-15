@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>开关按钮</title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+		<!-- 生产环境中不建议使用 -->
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="example"></div>
+		<script type="text/babel">
+			class Toggle extends React.Component{
+				state = {isToggleOn: true};
+				// 用了箭头函数以后，就不用用bind绑定了
+				handleClick=()=>{
+					this.setState(prevState=>({
+						isToggleOn:!prevState.isToggleOn
+					}));
+					
+				}
+				render(){
+					return(<div>
+					{this.state.isToggleOn?
+					<h1>欢迎回来</h1>:<h1>请先登录</h1>}
+					<button onClick={this.handleClick}>
+					{this.state.isToggleOn? '退出':'登录'}
+					</button>
+					</div>
+					);
+				}
+			}
+			ReactDOM.render(
+			<Toggle />,document.getElementById('example')
+			);
+		</script>
+	</body>
+</html>

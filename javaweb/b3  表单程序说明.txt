@@ -1,0 +1,7 @@
+①<form>创建一个表单：id调用要唯一，method属性是设置表单数据的提交方式，一般取get和post；get为默认值，这种提交的数据将显示在浏览器的地址栏中。get表示数据量比较小，安全性要求不高，而post则相反，一般情况下要求使用post。action用于指定表单数据最终提交的地址。
+②input是单行文本输入框；多行文本框用textarea，格式为<textarea cols="每行中的字符数" rows="显示的行数">
+       文本内容
+</textarea>
+③type=text表示单行文本框，radio单选按钮组，name相同的单选项扭组自成一组，checked表示被选中状态。
+④type=submit是提交按钮，是直接提交到action后面的内容。reset表示重置。
+⑤下拉框用<select>

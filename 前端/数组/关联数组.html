@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关联数组即自定义下标名称的数组</title>
+	</head>
+	<body>
+		<script>
+			// 关联数组的length属性无效，只能用for in来循环
+			var bookInfo=[];
+			bookInfo['bookname']="西游记";
+			bookInfo['price']=35.5;
+			for(var key in bookInfo){
+				document.write(bookInfo[key]);
+				document.write('<br />');
+			}
+			
+		</script>
+	</body>
+</html>

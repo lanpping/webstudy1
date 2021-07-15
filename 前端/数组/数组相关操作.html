@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组API</title>
+	</head>
+	<body>
+		<script>
+			var arr1=[12,"de",33];
+			var chars=["h","e","l","l","o"];
+			var arr2=[];
+			var arr3=[666];
+			var arr4=[699,6660,1,2000000];
+			
+			// String(arr)
+			// 将数组中每个元素转为字符串，用逗号分隔，用于鉴定数组是否被修改过
+			document.write("新arr1："+String(arr1));
+			document.write('<br />');
+			
+			//连接
+			//arr.join("连接符")
+			// 将arr中每个元素转为字符串，下面是将字符拼接成单词hello，若双引号内是空格即就是拼接成句子
+			document.write("连接后的chars："+chars.join(""));
+			document.write('<br />');
+			document.write("判断是否arr2为空："+arr2.join("")=="");// 判断数组是否为空
+			document.write('<br />');
+			
+			//拼接
+			//拼接和选取，不直接修改原数组，而返回新数组
+			//arr.concat(.....)拼接
+			var newarr1=arr3.concat(99,arr1,56);
+			document.write("拼接形成的newarr1："+newarr1);//输出99,12，de,33,56,原数组arr3值不变
+			document.write('<br />');
+			
+			//选取
+			//arr.slice(starti,endi+1),选取，endi加一是因为两个参数是下标的函数都是含头不含尾
+			//选取从starti到endi所有元素，组成新数组返回不改变原数组
+			var newarr2=newarr1.slice(0,3);
+			var newarr3=newarr1.slice(1);//若选到结尾，则第二个参数可省略，若从0开始即复制数组
+			//若选取元素离结尾近，可用倒数下标(arr.length-n,arr.length-m+1)
+			var newarr4=newarr1.slice(newarr1.length-3,newarr1.length-2+1);
+			var newarr5=newarr1.slice(-3,-1);//上述的简写形式
+            document.write("选取后形成的newarr2："+newarr2);
+			document.write('<br />');
+			document.write("选取后形成的newarr3："+newarr3);
+			document.write('<br />');
+			document.write("选取后形成的newarr4："+newarr4);
+			document.write('<br />');
+			document.write("选取后形成的newarr5："+newarr5);
+			document.write('<br />');
+			
+			//删除
+			//arr.splice(starti,n),直接修改原数组，删除从starti开始的n个元素
+			var newarr6=newarr3.splice(1,1);//返回值newarr6存放被删除的元素组成的临时数组
+			document.write("被删除后的newarr3："+newarr3);//原数组直接被修改了
+			document.write('<br />');
+			document.write("newarr3被删元素组成的临时数组newarr6："+newarr6);
+			document.write('<br />');
+			
+			//插入
+			//arr.splice(starti,0,值1,值2),注意是0
+			//在starti位置插入新值1，新值2，原starti位置及以后元素向后顺移
+			var newarr7=newarr5.splice(0,0,"新来的","插队的");
+			document.write("插入新值后形成的newarr7："+newarr7);//newarr7无值
+			document.write('<br />');
+			document.write("被插入新元素后的newarr5："+newarr5);//原数组被改变
+			document.write('<br />');
+			
+			//替换
+			//arr.splice(starti,n,值1,值2),注意又变回了n
+			//先删starti位置的n个值，再在starti位置插入新值1，新值2，删除元素个数不必相等
+			var newarr8=newarr5.splice(0,2,"新来的泥奏凯","插队的也走开","要按顺序先来先到");
+			document.write("newarr5中被替换走的元素所形成的newarr8："+newarr8);//
+			document.write('<br />');
+			document.write("被替换后的newarr5："+newarr5);//原数组被改变
+			document.write('<br />');
+			
+			//颠倒数组 arr.reverse()
+			//颠倒数组中元素的顺序，仅负责原样颠倒，不负责排序
+			newarr8.reverse();
+			document.write("被原样颠倒后的newarr8："+newarr8);//原数组被改变
+			document.write('<br />');
+			
+			//排序  arr.sort()
+			//从小到大排，默认将所有元素转换为字符串再排列，故只能排字符串类型的元素
+			arr4.sort((a,b)=>a-b);
+			document.write("被排序后的arr4："+arr4);//原数组被改变
+			document.write('<br />');
+		</script>
+	</body>
+</html>

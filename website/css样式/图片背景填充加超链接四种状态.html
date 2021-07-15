@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+         <head>
+                  <meta charset="utf-8" />
+                   <title>css样式2</title>
+                   <style type="text/css">
+                         #div{
+                              height:100px;
+                              width:500px;
+                              background:red url("006.jpg") repeat ;       /*图片背景填充*/ 
+                          }
+                          a{font-size:22px;}
+                          a:link{
+                               text-decoration:none;
+                                color:#09f;    /*未访问时文字颜色为天蓝色，文字没有装饰线*/
+                          }
+                          a:visited{
+                               text-decoration:none;
+                                color:#930;    /*已访问时文字颜色变为棕色，文字没有装饰线*/
+                          }
+                          a:hover{
+                               font-size:200%;
+                               text-decoration:underline;
+                                color:#03c;    /*鼠标悬停时字体放大到原来的百分之200，且文字颜色变为深蓝色，文字有下划线*/
+                          }
+                          a:active{
+                               text-decoration:none;
+                                color:#03c;    /*按下鼠标时时文字颜色为深蓝色，文字没有装饰线*/
+                          }
+                   </style>
+          </head>
+          <body>
+                    <div id="div">
+   <!--如果不用123来区分地址，则只点击任意一个链接，其他链接也会变色，因为他们地址一样所以浏览器会认为全部都点击过了故要加无用的参数来区分-->
+                          <a href="#1">迪拜华商财富缩水 瞻望前景信心犹豫</a> <br />
+                          <a href="#2">全球华商总资产恢复增至3.9万亿美元</a>  <br />
+                          <a href="#3">华商基金胡宇权：行业不平衡将带来投资机会</a> <br />
+                     </div>
+          </body>
+</html>
+
+
+
+
+
+
+
+
+
+ 

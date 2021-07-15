@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JQuery AJAX 的加载函数</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(function(){
+			    $("button").click(function(){
+// load(必须的URL,可选的data,可选的callback);responseTxt包含调用成功的结果内容，statusTxt包含调用状态，xhr包含xmlhttprequest对象
+					$(".div1").load("demo_test.txt",function(responseTxt,statusTxt,xhr){
+						if(statusTxt=="success")
+						    alert("外部内容加载成功！");
+						if(statusTxt=="error")
+						    alert("error:"+xhr.status+":"+xhr.statusTxt);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="div1">使用Jquery AJAX 来修改文字内容</div>
+		<button>获取外部内容</button>
+	</body>
+</html>
